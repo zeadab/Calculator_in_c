@@ -4,13 +4,15 @@ int main(void)
 {
     double num1 ;
     double num2 ;
-    char operator ;
+    char operator = '\0';
     double result;
 
     printf("Enter the first number please: ");
     scanf("%lf", &num1);
+
     printf("which Operator (+,*,-;/)? ");
-    scanf("%c", &operator);
+    scanf(" %c", &operator);
+
     printf("Enter the second number please: ");
     scanf("%lf", &num2);
 
@@ -24,7 +26,7 @@ int main(void)
         break;
         case '/': result = num1 / num2;
         break;
-        default:printf("please Enter a Operator");
+        default: printf("Invalid Operator");
     }
     printf("The result is: %lf", result);
     return 0;
